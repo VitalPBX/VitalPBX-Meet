@@ -26,10 +26,12 @@ sudo ufw allow 5349/tcp
 sudo ufw enable
 echo -e "*     We proceed with the installation of JitSi Meet       *"
 apt -y install jitsi-meet
+
 echo -e "*     We download the images to use in the Branding        *"
-wget https://raw.githubusercontent.com/VitalPBX/vitalpbx_ha_v4/main/welcome
-
-
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/watermark.png -O /usr/share/jitsi-meet/images/watermark.png
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/logo-vitalpbx.png -O /usr/share/jitsi-meet/images/logo-vitalpbx.png
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/forum-vitalpbx.png -O /usr/share/jitsi-meet/images/forum-vitalpbx.png
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/wiki-vitalpbx.png -O /usr/share/jitsi-meet/images/wiki-vitalpbx.png
 
 echo -e "*         Change configuration file - App name             *"
 sed -i 's|APP_NAME: ‘Jitsi Meet’|APP_NAME: ‘VitalPBX Meet’|g' /usr/share/jitsi-meet/interface_config.js
