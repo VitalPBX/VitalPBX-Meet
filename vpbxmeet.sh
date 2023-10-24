@@ -10,6 +10,8 @@ echo -e "************************************************************"
 echo -e "*        Welcome to the VitalPBX Meet installation         *"
 echo -e "*                 Powered by jtsi Meet                     *"
 echo -e "************************************************************"
+sudo apt -y update
+sudo apt -y install ufw
 echo -e "*            Downloading Jitsi's public GPG key            *"
 curl -fsSL https://download.jitsi.org/jitsi-key.gpg.key -o /etc/apt/keyrings/jitsi-key.gpg.key
 echo -e "*            Adding Jitsi's official repository            *"
