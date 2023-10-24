@@ -28,5 +28,7 @@ sudo apt -y install ufw
 # Installation
 Next we are going to download the script to carry out the installation automatically.
 <pre>
-wget 
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/vpbxmeet.sh
+chmod +x vpbxmeet.sh
+./vpbxmeet.sh
 </pre>
