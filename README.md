@@ -14,17 +14,6 @@ VitalPBX Meet is based on Jitsi Meet which is an Open Source Video Conference so
 •	Debian 12 recommended<br>
 •	A Valid FQDN Domain (Before starting the installation process, remember that you must have your NS server pointing the domain or sub-domain to the IP of the server where we are going to install VitalPBX Meet)<br>
 
-# Pre-Installation
-Update the OS
-<pre>
-sudo apt -y update
-</pre>
-
-Install the Firewall
-<pre>
-sudo apt -y install ufw
-</pre>
-
 # Installation
 Next we are going to download the script to carry out the installation automatically.
 <pre>
