@@ -31,13 +31,13 @@ echo -e "*     We proceed with the installation of JitSi Meet       *"
 apt -y install jitsi-meet
 
 echo -e "*     We download the images to use in the Branding        *"
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/watermark.svg -O /usr/share/jitsi-meet/images/watermark.svg
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/logo-vitalpbx.png -O /usr/share/jitsi-meet/images/logo-vitalpbx.png
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/forum-vitalpbx.png -O /usr/share/jitsi-meet/images/forum-vitalpbx.png
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/wiki-vitalpbx.png -O /usr/share/jitsi-meet/images/wiki-vitalpbx.png
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/welcome-background.png -O /usr/share/jitsi-meet/images/welcome-background.png
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/favicon.ico -O /usr/share/jitsi-meet/images/favicon.ico
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/favicon.ico -O /usr/share/jitsi-meet/favicon.ico
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/watermark.svg -O /usr/share/jitsi-meet/images/watermark.svg
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/logo-vitalpbx.png -O /usr/share/jitsi-meet/images/logo-vitalpbx.png
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/forum-vitalpbx.png -O /usr/share/jitsi-meet/images/forum-vitalpbx.png
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/wiki-vitalpbx.png -O /usr/share/jitsi-meet/images/wiki-vitalpbx.png
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/welcome-background.png -O /usr/share/jitsi-meet/images/welcome-background.png
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/favicon.ico -O /usr/share/jitsi-meet/images/favicon.ico
+wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/favicon.ico -O /usr/share/jitsi-meet/favicon.ico
 
 echo -e "*         Change configuration file - App name             *"
 sed -i 's|APP_NAME: ‘Jitsi Meet’|APP_NAME: ‘VitalPBX Meet’|g' /usr/share/jitsi-meet/interface_config.js
