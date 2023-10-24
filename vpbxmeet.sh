@@ -41,6 +41,9 @@ sed -i 's|APP_NAME: ‘Jitsi Meet’|APP_NAME: ‘VitalPBX Meet’|g' /usr/share
 echo -e "*               Change Watermark logo & URL                *"
 sed -i 's|JITSI_WATERMARK_LINK: ‘https://jitsi.org’|JITSI_WATERMARK_LINK: ‘https://vitalpbx.com’|g' /usr/share/jitsi-meet/interface_config.js
 sed -i 's|// DEFAULT_LOGO_URL: 'images/watermark.svg'|// DEFAULT_LOGO_URL: 'images/watermark.png'|g' /usr/share/jitsi-meet/interface_config.js
+sed -i 's|watermark.svg|watermark.png|g' /usr/share/jitsi-meet/interface_config.js
+
+sed -i 's|Jitsi Meet|VitalPBX Meet|g' /usr/share/jitsi-meet/title.html
 
 echo -e "*  Change the main title of the page that says Jitsi Meet  *"
 sed -i 's|"headerTitle":"Jitsi Meet"|"headerTitle":"VitalPBX Meet"|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
