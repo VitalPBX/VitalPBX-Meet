@@ -1,5 +1,8 @@
 # VitalPBX-Meet
-VitalPBX Meet - Secure and high quality meetings - Powered by Jitsi Meet
+VitalPBX Meet - Secure and high quality meetings - Powered by Jitsi Meet<br>
+
+# Introduction
+VitalPBX Meet is based on Jitsi Meet which is an Open Source Video Conference solution that allows users to hold online meetings. It's developed by the Jitsi project and enables users to conduct video conferences without the need to download an application, as it operates directly from a web browser.<br>
 
 ## Prerequisites
 1.-Hardware Minimum Requirements<br>
