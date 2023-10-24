@@ -8,7 +8,7 @@ set -e
 echo -e "\n"
 echo -e "************************************************************"
 echo -e "*        Welcome to the VitalPBX Meet installation         *"
-echo -e "*                 Powered by jtsi Meet                     *"
+echo -e "*                 Powered by Jitsi Meet                    *"
 echo -e "************************************************************"
 echo -e "*             Update & Install firewall                    *"
 sudo apt -y update
@@ -65,5 +65,5 @@ sed -i 's|Jitsi on mobile|VitalPBX Meet|g' /usr/share/jitsi-meet/libs/app.bundle
 sed -i 's|download our apps and start a meeting from anywhere|Powered by Jitsi Meet|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 echo -e "************************************************************"
 echo -e "*        VitalPBX Meet has been completely installed       *"
-echo -e "*                 Powered by jtsi Meet                     *"
+echo -e "*                 Powered by Jitsi Meet                    *"
 echo -e "************************************************************"
