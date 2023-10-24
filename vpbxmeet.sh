@@ -33,6 +33,8 @@ wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/logo-vitalpbx.pn
 wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/forum-vitalpbx.png -O /usr/share/jitsi-meet/images/forum-vitalpbx.png
 wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/wiki-vitalpbx.png -O /usr/share/jitsi-meet/images/wiki-vitalpbx.png
 wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/welcome-background.png -O /usr/share/jitsi-meet/images/welcome-background.png
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/favicon.ico -O /usr/share/jitsi-meet/images/favicon.ico
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/favicon.ico -O /usr/share/jitsi-meet/favicon.ico
 
 echo -e "*         Change configuration file - App name             *"
 sed -i 's|APP_NAME: ‘Jitsi Meet’|APP_NAME: ‘VitalPBX Meet’|g' /usr/share/jitsi-meet/interface_config.js
