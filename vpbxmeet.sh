@@ -28,7 +28,7 @@ echo -e "*     We proceed with the installation of JitSi Meet       *"
 apt -y install jitsi-meet
 
 echo -e "*     We download the images to use in the Branding        *"
-wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/watermark.png -O /usr/share/jitsi-meet/images/watermark.png
+wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/watermark.svg -O /usr/share/jitsi-meet/images/watermark.svg
 wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/logo-vitalpbx.png -O /usr/share/jitsi-meet/images/logo-vitalpbx.png
 wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/forum-vitalpbx.png -O /usr/share/jitsi-meet/images/forum-vitalpbx.png
 wget https://github.com/VitalPBX/VitalPBX-Meet/blob/main/images/wiki-vitalpbx.png -O /usr/share/jitsi-meet/images/wiki-vitalpbx.png
@@ -40,8 +40,7 @@ echo -e "*         Change configuration file - App name             *"
 sed -i 's|APP_NAME: ‘Jitsi Meet’|APP_NAME: ‘VitalPBX Meet’|g' /usr/share/jitsi-meet/interface_config.js
 echo -e "*               Change Watermark logo & URL                *"
 sed -i 's|JITSI_WATERMARK_LINK: ‘https://jitsi.org’|JITSI_WATERMARK_LINK: ‘https://vitalpbx.com’|g' /usr/share/jitsi-meet/interface_config.js
-sed -i 's|// DEFAULT_LOGO_URL: 'images/watermark.svg'|// DEFAULT_LOGO_URL: 'images/watermark.png'|g' /usr/share/jitsi-meet/interface_config.js
-sed -i 's|watermark.svg|watermark.png|g' /usr/share/jitsi-meet/interface_config.js
+sed -i 's|// DEFAULT_LOGO_URL: 'images/watermark.svg'|DEFAULT_LOGO_URL: 'images/watermark.svg'|g' /usr/share/jitsi-meet/interface_config.js
 
 sed -i 's|Jitsi Meet|VitalPBX Meet|g' /usr/share/jitsi-meet/title.html
 
@@ -61,4 +60,7 @@ sed -i 's|f-droid-badge.png|wiki-vitalpbx.png|g' /usr/share/jitsi-meet/libs/app.
 echo -e "*    Change the text that says: “Jitsi on mobile....       *"
 sed -i 's|Jitsi on mobile|VitalPBX Meet|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|download our apps and start a meeting from anywhere|Powered by Jitsi Meet|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
-
+echo -e "************************************************************"
+echo -e "*        VitalPBX Meet has been completely installed       *"
+echo -e "*                 Powered by jtsi Meet                     *"
+echo -e "************************************************************"
