@@ -40,7 +40,7 @@ wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/favico
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/favicon.ico -O /usr/share/jitsi-meet/favicon.ico
 
 echo -e "*         Change configuration file - App name             *"
-sed -i 's|APP_NAME: ‘Jitsi Meet’|APP_NAME: ‘VitalPBX Meet’|g' /usr/share/jitsi-meet/interface_config.js
+sed -i 's|Jitsi Meet|VitalPBX Meet|g' /usr/share/jitsi-meet/interface_config.js
 echo -e "*               Change Watermark logo & URL                *"
 sed -i 's|JITSI_WATERMARK_LINK: ‘https://jitsi.org’|JITSI_WATERMARK_LINK: ‘https://vitalpbx.com’|g' /usr/share/jitsi-meet/interface_config.js
 sed -i 's|// DEFAULT_LOGO_URL: 'images/watermark.svg'|DEFAULT_LOGO_URL: 'images/watermark.svg'|g' /usr/share/jitsi-meet/interface_config.js
@@ -55,10 +55,13 @@ sed -i 's|"headerTitle": "Jitsi Meet"|"headerTitle": "VitalPBX Meet"|g' /usr/sha
 echo -e "*      Change the three logos and URL of the footer        *"
 sed -i 's|https://itunes.apple.com/us/app/jitsi-meet/id1165103905|https://vitalpbx.com|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|app-store-badge.png|logo-vitalpbx.png|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
+sed -i 's|Download mobile app for iOS|VitalPBX WEB Site|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|https://play.google.com/store/apps/details?id=org.jitsi.meet|https://forums.vitalpbx.org|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|google-play-badge.png|forum-vitalpbx.png|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
+sed -i 's|Download mobile app for Android|VitalPBX Forum|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|https://f-droid.org/en/packages/org.jitsi.meet/|https://wiki.vitalpbx.com|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|f-droid-badge.png|wiki-vitalpbx.png|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
+sed -i 's|Download mobile app for F-Droid|VitalPBX Wiki|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 
 echo -e "*    Change the text that says: “Jitsi on mobile....       *"
 sed -i 's|Jitsi on mobile|VitalPBX Meet|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
