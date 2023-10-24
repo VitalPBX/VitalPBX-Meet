@@ -50,3 +50,6 @@ sed -i 's|google-play-badge.png|forum-vitalpbx.png|g' /usr/share/jitsi-meet/libs
 sed -i 's|https://f-droid.org/en/packages/org.jitsi.meet/|https://wiki.vitalpbx.com|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 sed -i 's|f-droid-badge.png|wiki-vitalpbx.png|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
 
+echo -e "*    Change the text that says: “Jitsi on mobile....       *"
+sed -i 's|Jitsi on mobile â€“ download our apps and start a meeting from anywhere|VitalPBX Meet is Powered by Jitsi Meet|g' /usr/share/jitsi-meet/libs/app.bundle.min.js
+
