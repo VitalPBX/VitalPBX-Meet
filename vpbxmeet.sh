@@ -41,10 +41,9 @@ wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/images/favico
 
 echo -e "*         Change configuration file - App name             *"
 sed -i 's|Jitsi Meet|VitalPBX Meet|g' /usr/share/jitsi-meet/interface_config.js
-echo -e "*               Change Watermark logo & URL                *"
+echo -e "*                   Change Watermark URL                   *"
 sed -i 's|JITSI_WATERMARK_LINK: ‘https://jitsi.org’|JITSI_WATERMARK_LINK: ‘https://vitalpbx.com’|g' /usr/share/jitsi-meet/interface_config.js
-sed -i 's|// DEFAULT_LOGO_URL: 'images/watermark.svg'|DEFAULT_LOGO_URL: 'images/watermark.svg'|g' /usr/share/jitsi-meet/interface_config.js
-
+echo -e "*                      Change Titles                       *"
 sed -i 's|Jitsi Meet|VitalPBX Meet|g' /usr/share/jitsi-meet/title.html
 
 echo -e "*  Change the main title of the page that says Jitsi Meet  *"
