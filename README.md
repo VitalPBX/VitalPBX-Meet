@@ -22,3 +22,22 @@ wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/vpbxmeet.sh
 chmod +x vpbxmeet.sh
 ./vpbxmeet.sh
 </pre>
+
+# Interconnect Jitsi with VitalPBX
+## How it works
+Jigasi registers as a SIP client and can be called or be used by Jitsi Meet to make outgoing calls. Jigasi is NOT a SIP server. It is just a connector that allows SIP servers and B2BUAs to connect to Jitsi Meet. It handles the XMPP signaling, ICE, DTLS/SRTP termination and multiple-SSRC handling for them.
+
+## Outgoing calls
+To call someone from Jitsi Meet application, Jigasi must be configured and started like described in the 'Install and run' section. This will cause the telephone icon to appear in the toolbar which will popup a call dialog on click.
+
+First we create a PJSIP extension in VitalPBX, and then we proceed to the installation and configuration of the jigasi module.
+<pre>
+apt install jigasi -y  
+</pre>
+
+Finally, we wait for the installation process to finish and proceed to restart the service.
+<pre>
+systemctl restart jigasi.service
+systemctl restart jitsi-videobridge2
+</pre>
+
