@@ -9,7 +9,7 @@ VitalPBX Meet is based on Jitsi Meet which is an Open Source Video Conference so
   •	1GB RAM<br>
   •	2GHz CPU<br>
   •	25GB Disk<br>
-  •	1GB Net<br>
+  •	1GB Net<br><br>
 2.- Software Requirements<br>
 •	Ubuntu 20.4 recommended<br>
 •	OpenJDK 11 must be used<br>
