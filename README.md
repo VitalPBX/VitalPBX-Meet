@@ -12,6 +12,7 @@ VitalPBX Meet is based on Jitsi Meet which is an Open Source Video Conference so
   •	1GB Net<br>
 2.- Software Requirements<br>
 •	Ubuntu 20.4 recommended<br>
+•	OpenJDK 11 must be used<br>
 •	A Valid FQDN Domain (Before starting the installation process, remember that you must have your NS server pointing the domain or sub-domain to the IP of the server where we are going to install VitalPBX Meet)<br>
 
 # Installation
