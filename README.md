@@ -28,7 +28,7 @@ chmod +x vpbxmeet.sh
 Jigasi registers as a SIP client and can be called or be used by Jitsi Meet to make outgoing calls. Jigasi is NOT a SIP server. It is just a connector that allows SIP servers and B2BUAs to connect to Jitsi Meet. It handles the XMPP signaling, ICE, DTLS/SRTP termination and multiple-SSRC handling for them.
 
 ## Create an Extension in VitalPBX
-Before the next step we must create an extension in VitalPBx and write down the username and password. It is very important that the user format that we are asked for includes the domain, so if for example we create user 2600, the format that we are going to use is 2600@mydomain.com
+Before the next step we must create an extension in VitalPBX and write down the username and password. It is very important that the user format that we are asked for includes the domain, so if for example we create user 2600, the format that we are going to use is 2600@mydomain.com
 
 ## Outgoing calls
 To call someone from Jitsi Meet application, Jigasi must be configured and started like described in the 'Install and run' section. This will cause the telephone icon to appear in the toolbar which will popup a call dialog on click.
