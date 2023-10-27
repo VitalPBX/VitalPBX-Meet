@@ -125,5 +125,5 @@ User: admin<br>
 Password: 12345<br>
 
 ## Note:
-A special thanks to Crosstalk Soltion for providing some of the information on how to activate in Jitsi authentication.<br>
+A special thanks to Crosstalk Solution for providing some of the information on how to activate in Jitsi authentication.<br>
 https://www.crosstalksolutions.com/how-to-enable-jitsi-server-authentication/
