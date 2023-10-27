@@ -44,3 +44,86 @@ systemctl restart jigasi.service
 systemctl restart jitsi-videobridge2
 </pre>
 
+## Enable Jitsi Server Authentication
+
+Prosody is the name of the Jitsi component that handles authentication. The first thing we need to do is enable authentication on our main domain – for our example, our main domain was jitsi.crosstalksolutions.com. These changes have to be made in the /etc/prosody/conf.avail/[your-hostname].cfg.lua file. So, for our example, we want to edit:
+
+<pre>
+nano -w /etc/prosody/conf.avail/mydomain.com.cfg.lua
+</pre>
+
+Find the line that says ‘VirtualHost “[your-hostname].” Underneath that line you’ll see another line that says:
+<pre>
+authentication = "jitsi_anonymous" 
+</pre>
+
+Change that line to:
+<pre>
+authentication = "internal_plain"  
+</pre>
+
+This disables the anonymous authentication for the ‘main’ server host URL – however, we also need to create a new virtual host for our anonymous guests in order to facilitate their anonymous connections. Scroll to the bottom of the file and add these lines to create the new virtual host with the anonymous login method (use your own FQDN):
+
+<pre>
+VirtualHost "guest.mydomain.com"
+    authentication = "anonymous"
+    c2s_require_encryption = false 
+</pre>
+
+Next we need to configure our newly created VirtualHost / anonymous domain in our config.js file:
+<pre>
+nano -w /etc/jitsi/meet/mydomain.com-config.js
+</pre>
+
+Under the ‘var config = [‘ section (right near the top of the file), you should already see a line that says domain: ‘jitsi.crosstalksolutions.com’, (it’ll say your FQDN, not mine). Just below that line, after the comment, you should see a line that is commented out that starts with ‘anonymousdomain.’ Uncomment that line and add your FQDN with a ‘guest.’ in front of it like this:
+<pre>
+anonymousdomain: 'guest.mydomain.com',
+</pre>
+
+Next, we need to tell the Jicofo service to only allow requests from our ‘authenticated’ domain.
+<pre>
+nano -w /etc/jitsi/jicofo/logging.properties
+</pre>
+
+Add a new line at the bottom of this file:
+<pre>
+org.jitsi.jicofo.auth.URL=XMPP:mydomain.com
+</pre>
+
+For this type security to work I also must edit jicofo.conf
+<pre>
+nano -w /etc/jitsi/jicofo/jicofo.conf
+</pre>
+
+Add this before the last "}"
+<pre>
+  authentication: {
+    enabled: true
+    type: XMPP
+    login-url: mydomain.com
+  }
+</pre>
+
+Now let’s restart our Jitsi services:
+
+<pre>
+systemctl restart prosody
+systemctl restart jicofo
+systemctl restart jitsi-videobridge2
+</pre>
+
+To add users who can create video conferences in Jitsi, run the following command:
+prosodyctl register <username> jitsi.crosstalksolutions.com <password>
+So – to create user ‘john’ with password ‘12345’ you would run:
+
+<pre>
+prosodyctl register admin mydomain.com 12345
+</pre>
+
+Now after you create a new conference it will ask you for your username and password, which in this case would be:<br>
+User: admin<br>
+Password: 12345<br>
+
+## Note:
+A special thanks to Crosstalk Soltion for providing some of the information on how to activate ne Jitsi authentication.<br>
+https://www.crosstalksolutions.com/how-to-enable-jitsi-server-authentication/
