@@ -46,7 +46,7 @@ systemctl restart jitsi-videobridge2
 
 ## Enable Jitsi Server Authentication
 
-Prosody is the name of the Jitsi component that handles authentication. The first thing we need to do is enable authentication on our main domain – for our example, our main domain was jitsi.crosstalksolutions.com. These changes have to be made in the /etc/prosody/conf.avail/[your-hostname].cfg.lua file. So, for our example, we want to edit:
+Prosody is the name of the Jitsi component that handles authentication. The first thing we need to do is enable authentication on our main domain – for our example, our main domain was mydomain.com. These changes have to be made in the /etc/prosody/conf.avail/[your-hostname].cfg.lua file. So, for our example, we want to edit:
 
 <pre>
 nano -w /etc/prosody/conf.avail/mydomain.com.cfg.lua
