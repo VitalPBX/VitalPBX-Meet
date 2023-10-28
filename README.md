@@ -16,6 +16,11 @@ VitalPBX Meet is based on Jitsi Meet which is an Open Source Video Conference so
 •	A Valid FQDN Domain (Before starting the installation process, remember that you must have your NS server pointing the domain or sub-domain to the IP of the server where we are going to install VitalPBX Meet)<br>
 
 # Installation
+It is always recommended to do an OS update.
+<pre>
+sudo apt -y update
+</pre>
+
 Next we are going to download the script to carry out the installation automatically.
 <pre>
 wget https://raw.githubusercontent.com/VitalPBX/VitalPBX-Meet/main/vpbxmeet.sh
