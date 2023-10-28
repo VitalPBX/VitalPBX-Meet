@@ -18,7 +18,7 @@ VitalPBX Meet is based on Jitsi Meet which is an Open Source Video Conference so
 # Installation
 It is always recommended to do an OS update.
 <pre>
-sudo apt -y update
+apt -y update
 </pre>
 
 Next we are going to download the script to carry out the installation automatically.
