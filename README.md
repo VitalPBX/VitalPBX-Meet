@@ -45,14 +45,14 @@ systemctl restart jitsi-videobridge2
 </pre>
 
 ## Enable Jitsi Server Authentication
-
-Prosody is the name of the Jitsi component that handles authentication. The first thing we need to do is enable authentication on our main domain – for our example, our main domain was mydomain.com. These changes have to be made in the /etc/prosody/conf.avail/[your-hostname].cfg.lua file. So, for our example, we want to edit:
+To configure Jitsi Meet to enable authentication, you must follow the following procedure:
+Changes the /etc/prosody/conf.avail/mydomain.cfg.lua file.
 
 <pre>
 nano -w /etc/prosody/conf.avail/mydomain.com.cfg.lua
 </pre>
 
-Find the line that says ‘VirtualHost “[your-hostname].” Underneath that line you’ll see another line that says:
+Find the line that says ‘VirtualHost mydoamin.com” Underneath that line you’ll see another line that says:
 <pre>
 authentication = "jitsi_anonymous" 
 </pre>
@@ -75,7 +75,7 @@ Next we need to configure our newly created VirtualHost / anonymous domain in ou
 nano -w /etc/jitsi/meet/mydomain.com-config.js
 </pre>
 
-Under the ‘var config = [‘ section (right near the top of the file), you should already see a line that says domain: ‘jitsi.crosstalksolutions.com’, (it’ll say your FQDN, not mine). Just below that line, after the comment, you should see a line that is commented out that starts with ‘anonymousdomain.’ Uncomment that line and add your FQDN with a ‘guest.’ in front of it like this:
+Under the ‘var config = [‘ section (right near the top of the file), you should already see a line that says domain: ‘mydomain.com’, (it’ll say your FQDN, not mine). Just below that line, after the comment, you should see a line that is commented out that starts with ‘anonymousdomain.’ Uncomment that line and add your FQDN with a ‘guest.’ in front of it like this:
 <pre>
 anonymousdomain: 'guest.mydomain.com',
 </pre>
